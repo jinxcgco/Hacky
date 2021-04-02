@@ -1,0 +1,41 @@
+{% if site.useAppKit == true %}
+{% include head-appkit.html %}
+
+{% for courses in site.data.courses %}
+{% for course in courses %}
+{% if course.title != nil %}
+
+<div class="card card-style">
+  <img src="{{ course.thumb }}" class="img-fluid"/>
+  <div class="content">
+    <p class="mb-n1 color-highlight font-600">
+      {{ course.category }}
+    </p>
+    <h1>{{ course.title }}</h1>
+    <p class="opacity-60 text-uppercase font-10 mt-n2 font-600 mb-1">
+      {{ course.difficulty }} - {{ course.time }} hours
+    </p>
+    <p>
+      {{ course.shortDesc }}
+    </p>
+
+    <div class="d-flex">
+      <div class="me-auto">
+	<div>
+	  <a href="{{ course.url }}"
+	     class="btn btn-full btn-s font-600 rounded-s gradient-highlight mt-1
+		    float-start">
+	    Visit
+	  </a>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+{% endfor %}
+{% endfor %}
+
+{% include footer-appkit.html %}
+{% endif %}

@@ -1,0 +1,42 @@
+title: Network Hacking From Scratch
+shortDesc: >-
+  Learn how to hack networks and each one of its connected clients (regardless if they are connected through WiFi or a cable) 
+description: >-
+  Learn how networks work and how to hack them. By taking this course
+  I assume that you are a complete beginner so all the concepts and
+  methods will be taught in the course, therefore, no previous
+  knowledge is required.<br>
+url: network-hacking/index.html
+thumb: assets/images/courses/networkhacking.png
+lastUpdated: 03/2021
+requirements:
+  - A computer running any operating system
+  - A wireless adapter
+  - Minimum 4 GB RAM
+youlearn:
+  - Crack WPA and WPA2 networks
+  - Intercept data and spy on a network
+  - Perform Man In The Middle Attacks through different methods
+  - Control the connections of the clients connected to your target network
+  - Hack any computer on your own network
+  - Gain detailed information about clients and networks
+  - Sniff packets from clients and analyse them to stract passwords, cookies, url, videos, images, etcetera
+  - Bypass Captive Portals
+  - Bypass router-side security and run ARP Spoofing attacks without raising alarms
+  - Disconnect clients from a network without knowing the pasword
+  - Discover & connect to hidden networks
+  - Exploit the WPS Feature to get the WPA/WPA2 key
+  - Understand how fake access points work
+  - Bypass HTTPS and HSTS
+  - Create trojans and combine it with any other
+  - Replace downloads with trojans on the fly
+  - Hack WPA2 Enterprise networks
+  - Steal WPA/WPA2 passwords using evil twin attack
+  - Bypass MAC filtering
+  - Create fake access points
+  - Inject JavaScript / HTML code in HTTP and HTTPS pages
+category: Hacking
+contents:
+
+time: 18
+difficulty: Beginner

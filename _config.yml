@@ -1,0 +1,25 @@
+title: Hacky
+description: >-
+  A completely free education application.
+permalink: /:title/
+
+# Hackable variables
+
+## AppKit variables
+useAppKit: yes
+
+siteRoot: /
+circularHome: no
+
+coursesSliderOnHome: yes
+guidesOnHome: yes
+
+guidesOnHomeLimit: 5
+
+coursePageShowAbout: yes
+coursePageAboutShowYoulearn: yes
+coursePageAboutShowRequirements: yes
+coursePageAboutShowDuration: yes
+coursePageAboutShowDifficulty: yes
+
+coursePageCurriculumTitle: "Curriculum"

@@ -1,0 +1,9 @@
+- title: Installing Veil
+  description: >-
+    Learn to install the backdoor generator "Veil" on Kali Linux.
+  url: guides/veil/index.html
+
+- title: Create a Honeypot using Mana-Toolkit
+  description: >-
+    Learn to create a Honeypot using Mana-Toolkit so you can be the Man In The Middle
+  url: guides/honeypot-mana/index.html

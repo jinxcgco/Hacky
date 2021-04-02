@@ -1,0 +1,83 @@
+---
+title: Create a Honeypot using Mana-Toolkit
+layout: guide
+---
+
+**Note**: Before starting to create a Honeypot using Mana-Toolkit, you are going
+to need two network interfaces, one of them must be in monitor mode and the
+other one must have internet access.
+
+# Installing Mana-Toolkit
+
+In order to install mana-toolkit, create a bash file that contains the following
+script:
+
+```bash
+apt update
+apt install build-essential pkg-config git libnl-genl-3-dev libssl-dev
+cd /tmp
+git clone https://github.com/sensepost/hostapd-mana
+cd hostapd-mana
+make -C hostapd
+mv /tmp/hostapd-mana/hostapd /usr/lib/mana-toolkit
+cd /usr/share
+git clone --depth 1 https://github.com/sensepost/mana.git
+mv mana mana-toolkit
+mkdir /etc/mana-toolkit
+mv mana-toolkit/run-mana/conf/*.conf /etc/mana-toolkit
+```
+
+Execute it, wait and once it is finished executing, you'll have mana
+installed in your machine.
+
+## Configuring Mana
+
+Once you have your two network interfaces set up and Mana installed, we now have
+to modify its settings. Mana settings are stored in a text file, to edit the
+settings we are going to open this file, using a normal text editor (such as
+Emacs, Vim, Leafpad, etecetera), the path of the file that we want to modify is
+`/etc/mana-toolkit/hostapd-mana.conf` so, if we would like to open this file
+using Emacs, the command would look like to the following:
+
+```bash
+emacs /etc/mana-toolkit/hostapd-mana.conf
+```
+
+Once that file is open, you would get such a big file with a lot of settings to
+modify. One of the values that we want to change is **interface**, this value
+represents the interface that you want to use to broadcast the signal
+(basically, the wireless interface in monitor mode).
+
+The next thing you _might_ want to modify is the **ssid**, this is the network
+name that will appear when people look for Wi-Fi networks.
+
+The next file that we need to modify is the start script, this is the file that
+will start Mana-Toolkit for us, this file's location is
+`/usr/share/mana-toolkit/run-mana/start-nat-simple.sh`, again, if you would like
+to open up this file using emacs, the command would look like the following:
+
+```bash
+emacs /usr/share/mana-toolkit/run-mana/start-nat-simple.sh
+```
+
+In this file, there are two main things that you need to modify: **upstream**
+which represents the interface that has internet access and **phy** is again,
+the interface that is going to broadcast the signal, that is, our wireless
+interface in monitor mode.
+
+# Starting Mana-Toolkit
+
+In order to start Mana-Toolkit, all you have to do is to execute the bash script
+located at `/usr/share/mana-toolkit/run-mana/start-nat-simple.sh`, we can do
+so by executing the following command:
+
+```bash
+bash /usr/share/mana-toolkit/run-mana/start-nat-simple.sh
+```
+
+Once you execute that command, you'll get a message saying that the Fake access
+point is enabled and you can kill it by pressing the "Enter" key.
+
+Sometimes, the first time you run this script it will not know, it will probably
+give you an error, it's a good idea to just run the code again, literally the
+same command if it fails or if it returns any error.

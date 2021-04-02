@@ -1,0 +1,14 @@
+<p class="menu-divider mb-2 color-theme">Guides</p>
+
+{% for guide in site.data.guides reversed limit: site.guidesOnHomeLimit %}
+<a href="{{ guide.url }}" class="mb-3">
+  <div class="card card-style ms-0 me-0 rounded-0">
+    <div class="content">
+      <h1>{{ guide.title }}</h1>
+      <p>
+	{{ guide.description }}
+      </p>
+    </div>
+  </div>
+</a>
+{% endfor %}

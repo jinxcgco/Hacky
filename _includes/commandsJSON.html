@@ -1,0 +1,28 @@
+{
+"commands": [
+
+{% for command in site.data.commands %}
+{% if command.title != nil %}
+{
+"name": "{{ command.title }}",
+"desc": "{{ command.description }}",
+"cont": "{{ command.content | markdownify | normalize_whitespace | replace: '"', "'" }}",
+"cate": "{{ command.category }}",
+"commands": [
+{% for command in command.commands %}
+"{{ command }}"{% if forloop.index != forloop.length %},{% endif %}
+{% endfor %}
+],
+"examples": [
+{% for example in command.example %}
+"{{ example }}"{% if forloop.index != forloop.length %},{% endif %}
+{% endfor %}
+],
+"slug": "{{ command.title | slugify }}"
+}{% if forloop.index != forloop.length %},{% endif %}
+
+{% endif %}
+{% endfor %}
+
+]
+}

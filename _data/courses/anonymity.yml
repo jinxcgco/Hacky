@@ -1,0 +1,34 @@
+title: Anonymity and Privacy
+shortDesc: >-
+  Learn several anonymity techniques, how to secure your computer, files and explore the darknet securely
+description: >-
+  Welcome to this anonymity course.<br>
+
+  I will teach you several anonymity techniques to do a lot of things
+  privately, such as sending and receiving emails, chatting with
+  somebody and explore the DarkNet securely.<br>
+url: anonymity/index.html
+thumb: assets/images/courses/anonymity.jpeg
+lastUpdated: 03/2021
+requirements:
+  - No previous knowledge is required
+  - A computer with minimum 4GB of RAM
+youlearn:
+  - Install and configure operating systems like TAILS
+  - Communicate privately through emails and chat
+  - Obtain Bitcoin and Monero
+  - Explore the DarkNet
+  - Bypass censorship and connect to TOR
+  - Understand what VPN is and how to use it with TOR
+  - Setup and use end-to-end encryption
+  - Use PGP to encrypt and decrypt data
+  - Understand what a cryptocurrency is
+  - Discover hidden services on the DarkNet
+  - Understand what symmetric and asymmetric encryption is and manually encrypt, decrypt, sign and verify data
+  - Use DarkNet email services
+  - Configure and use Jabber/XMPP to communicate privately on the dark net
+  - Secure your computer and your data
+category: Anonymity
+contents:
+time: 10
+difficulty: Beginner

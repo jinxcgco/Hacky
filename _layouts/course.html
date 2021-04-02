@@ -1,0 +1,118 @@
+{% assign course = site.data.courses[page.course] %}
+
+{% if site.useAppKit == true %}
+{% include head-appkit.html %}
+
+<div class="card card-style">
+  <div class="card mb-0" style="background-image: url({{ course.thumb }})"
+       data-card-height="150"></div>
+  <div class="content mt-3">
+    <p class="color-highlight font-500 mb-n1">
+      Course
+    </p>
+    <h1>{{ course.title }}</h1>
+    <p>
+      {{ course.description }}
+    </p>
+  </div>
+</div>
+
+{% if site.coursePageShowAbout %}
+<div class="card card-style">
+
+  <div class="content mb-0">
+    <p class="mb-n1 color-highlight font-500">
+      {{ course.title }}
+    </p>
+    <h1 class="mb-2">
+      About
+    </h1>
+
+    {% if site.coursePageAboutShowYoulearn %}
+    <b class="mb-3 color-white">You will learn</b>
+    <ul class="icon-list ps-3">
+      {% for thing in course.youlearn %}
+      <li>
+	<i class="fa fa-check color-green-dark"></i>
+	{{ thing }}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if site.coursePageAboutShowRequirements %}
+    <b class="mb-3 color-white">Requirements</b>
+    <ul class="icon-list ps-3">
+      {% for requirement in course.requirements %}
+      <li>
+	<i class="fa fa-check color-green-dark"></i>
+	{{ requirement }}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if site.coursePageAboutShowDuration %}
+    <p class="mb-0 color-white">
+      <b>Duration</b>: {{ course.time }} hours
+    </p>
+    {% endif %}
+
+    {% if site.coursePageAboutShowDifficulty %}
+    <p class="mb-3 color-white">
+      <b>Difficulty</b>: {{ course.difficulty }}
+    </p>
+    {% endif %}
+  </div>
+
+</div>
+{% endif %}
+
+<div class="card card-style">
+  <div class="content mb-0">
+    <p class="mb-n1 color-highlight font-500">
+      {{ course.title }}
+    </p>
+    <h1 class="mb-0">
+      {{ site.coursePageCurriculumTitle }}
+    </h1>
+
+    <div class="accordion mb-3" id="accordion-1">
+
+      {% for section in course.contents %}
+      <div class="mb-0">
+	<button class="btn accordion-btn no-effect color-theme"
+		data-bs-toggle="collapse"
+		data-bs-target="#collapse{{ forloop.index }}">
+
+	  <i class="fa fa-star color-yellow-dark me-2"></i>
+	  {{ section.title }}
+	  <i class="fa fa-plus font-10 accordion-icon"></i>
+
+	</button>
+	<div id="collapse{{ forloop.index }}" class="collapse"
+	     data-parent="accordion-1">
+
+	  <div class="pt-1 pb-2 ps-3 pe-3">
+	    <div class="list-group list-custom-small"
+		 style="margin-left: 30px;">
+	      {% for lesson in section.contents %}
+
+	      <a href="{{ lesson.url }}">
+		<span>{{ lesson.title }}</span>
+	      </a>
+
+	      {% endfor %}
+	    </div>
+	  </div>
+
+	</div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+{% include footer-appkit.html %}
+{% endif %}

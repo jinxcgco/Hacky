@@ -1,0 +1,32 @@
+<p class="menu-divider mb-2 color-theme">Courses</p>
+
+<div class="splide double-slider visible-slider slider-no-dots"
+     id="double-slider-1">
+
+  <div class="splide__track">
+    <div class="splide__list">
+
+      {% for courses in site.data.courses %}
+      {% for course in courses %}
+      {% if course.title != nil %}
+      <div class="splide__slide ps-3">
+	<a href="{{ course.url }}">
+	  <div class="card shadow-xl rounded-m" data-card-height="220"
+	       style="background-image: url({{ course.thumb }})">
+	    <div class="card-bottom text-center">
+	      <h4 class="color-white font-800 mb-3">
+		{{ course.title }}
+	      </h4>
+	    </div>
+	    <div class="card-overlay bg-gradient"></div>
+	  </div>
+	</a>
+      </div>
+      {% endif %}
+      {% endfor %}
+      {% endfor %}
+
+    </div>
+  </div>
+
+</div>

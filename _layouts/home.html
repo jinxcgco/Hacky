@@ -1,0 +1,13 @@
+{% if site.useAppKit == true %}
+{% include head-appkit.html %}
+
+{% if site.coursesSliderOnHome %}
+{% include home-courses-appkit.html %}
+{% endif %}
+
+{% if site.guidesOnHome %}
+{% include home-guides-appkit.html %}
+{% endif %}
+
+{% include footer-appkit.html %}
+{% endif %}

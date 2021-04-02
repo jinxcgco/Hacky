@@ -1,0 +1,40 @@
+{% if site.useAppKit == true %}
+{% include head-appkit.html %}
+
+<p class="menu-divider mb-2 color-theme">Guides</p>
+
+<div class="content mt-0">
+
+  <div class="search-box search-dark shadow-xl border-0 bg-theme rounded-sm bottom-0">
+    <i class="fa fa-search"></i>
+    <input type="text" class="border-0" placeholder="Search for commands here"
+	   onkeyup="search(this.value)"/>
+  </div>
+
+</div>
+
+<div id="inject">
+
+  {% for guide in site.data.guides reversed %}
+  <a href="{{ guide.url }}" class="mb-3">
+    <div class="card card-style ms-0 me-0 rounded-0">
+      <div class="content">
+	<h1>{{ guide.title }}</h1>
+	<p>
+	  {{ guide.description }}
+	</p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+
+</div>
+
+<script>
+
+  // TODO: Search
+
+</script>
+
+{% include footer-appkit.html %}
+{% endif %}

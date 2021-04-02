@@ -1,0 +1,171 @@
+title: Hacking From Scratch
+shortDesc: >-
+  Learn the basics of hacking, learn the most common methods and tools used by hackers, create your own lab and control every target in it.
+description: >-
+  Learn to use the most common tools and methods by hackers.<br><br>
+
+  Learn how a network works, how it communicates with the connected clients and
+  how to exploit the way it does so we can gain total control over any device by
+  only being connected on its same network.<br><br>
+
+  Learn what to do after you gain access to a device, and also, how you can fool
+  a human to download an execute malware created by yourself.<br><br>
+
+  We will also talk about the way websites work and the most common vulnerabilities
+  in them, we will talk about why they exist and als the way we can exploit and
+  fix each one of them.<br><br>
+
+  This is the part number one of a number of courses created by me. Each section
+  will also have its own course so we can learn more in detail about it. I hope
+  you find them useful and I also hope you like them and learn a lot.<br><br>
+url: hacking-scratch/index.html
+thumb: assets/images/courses/hackingscratch.jpeg
+lastUpdated: 03/2021
+requirements:
+  - A computer running any operating system
+  - A wireless Adapter
+  - Minimum 4 GB RAM
+  - Non linux or hacking prior knowledge is required
+youlearn:
+  - Learn hacking
+  - Hack and secure WiFi networks
+  - Learn to use the most common used tools by hackers
+  - Learn how to hack systems using social engineering
+  - Gain access to WiFi connections without knowing the passwords
+  - ARP Spoofing
+  - Intercept and modify network traffic on the fly
+  - Discover and exploit vulnerabilities
+  - Create and analyse malware
+  - Learn to hack websites
+  - Discover, exploit and fix SQL Injection vulnerabilities
+  - Discover and exploit XSS vulnerabilities
+  - Create a hacking lab
+  - Perform Man In The Middle Attacks
+  - Learn how to be anonymous on the internet
+  - Learn to communicate and send files completely anonymous
+  - Learn to access and navigate through the Dark Web
+category: Hacking
+contents:
+
+  - title: Introduction
+    contents:
+      - title: Introduction
+        url: lessons/hackingscratch/introduction/introduction/index.html
+      - title: What is hacking, a hacker and why should I learn it?
+        url: lessons/hackingscratch/introduction/definition/index.html
+
+  - title: Hacking Lab
+    contents:
+      - title: Hacking Lab
+        url: lessons/hackingscratch/lab/lab/index.html
+      - title: Install BlackArch on VirtualBox
+        url: lessons/hackingscratch/lab/vbox/index.html
+
+  - title: Introduction to Linux
+    contents:
+      - title: Introduction to the Linux Terminal
+        url: lessons/hackingscratch/linux/linuxterminal/index.html
+
+  - title: Network Hacking
+    contents:
+      - title: Introduction
+        url: lessons/hackingscratch/network/introduction/index.html
+      - title: Network Basics
+        url: lessons/hackingscratch/network/basics/index.html
+      - title: MAC Address
+        url: lessons/hackingscratch/network/mac/index.html
+      - title: Wireless Modes
+        url: lessons/hackingscratch/network/modes/index.html
+
+  - title: Network Hacking - Pre Connection Attacks
+    contents:
+      - title: Packet Sniffing
+        url: lessons/hackingscratch/preconn/sniffing/index.html
+      - title: WiFi Bands
+        url: lessons/hackingscratch/preconn/bands/index.html
+      - title: Packet Sniffing on Target Network
+        url: lessons/hackingscratch/preconn/sniffingtarget/index.html
+      - title: De-authentication Attack
+        url: lessons/hackingscratch/preconn/deauth/index.html
+
+  - title: Network Hacking - Gaining Access - WEP Cracking
+    contents:
+      - title: Theory Behind WEP Cracking
+        url: lessons/hackingscratch/crackingwep/theory/index.html
+      - title: WEP Cracking Basics
+        url: lessons/hackingscratch/crackingwep/basics/index.html
+      - title: Fake Auth
+        url: lessons/hackingscratch/crackingwep/fakeauth/index.html
+      - title: ARP Request Attack
+        url: lessons/hackingscratch/crackingwep/arprequest/index.html
+
+  - title: Network Hacking - Gaining Access - WPA/WPA2 Cracking
+    contents:
+      - title: Introduction
+        url: lessons/hackingscratch/crackingwpa/introduction/index.html
+      - title: Hacking WPA and WPA2 Without a Wordlist
+        url: lessons/hackingscratch/crackingwpa/nowordlist/index.html
+      - title: Capturing the Handshake
+        url: lessons/hackingscratch/crackingwpa/handshake/index.html
+      - title: Creating a Wordlist
+        url: lessons/hackingscratch/crackingwpa/wordlist/index.html
+      - title: Cracking WPA and WPA2 Using a Wordlist Attack
+        url: lessons/hackingscratch/crackingwpa/wordlistattack/index.html
+
+  - title: Network Hacking - Security
+    contents:
+      - title: Securing Your Network From Hackers
+        url: lessons/hackingscratch/security/securing/index.html
+
+  - title: Network Hacking - Post-connection Attacks
+    contents:
+      - title: Introduction
+        url: lessons/hackingscratch/postc/introduction/index.html
+
+  - title: Network Hacking - Post-connection Attacks - Information Gathering
+    contents:
+      - title: Discovering Devices Connected to the Same Network
+        url: lessons/hackingscratch/postc/info/devices/index.html
+      - title: Gathering Sensitive Information About Connected Devices
+        url: lessons/hackingscratch/postc/info/sensitive/index.html
+
+  - title: Network Hacking - Post-connection Attacks - Man In The Middle
+    contents:
+      - title: What is ARP Poisoning?
+        url: lessons/hackingscratch/postc/mitm/arp/index.html
+      - title: ARP Spoofing using arpspoof
+        url: lessons/hackingscratch/postc/mitm/arpspoof/index.html
+      - title: Bettercap Basics
+        url: lessons/hackingscratch/postc/mitm/bettercap-basics/index.html
+      - title: ARP Spoofing using Bettercap
+        url: lessons/hackingscratch/postc/mitm/bettercap-arp/index.html
+      - title: Spying on Network Devices
+        url: lessons/hackingscratch/postc/mitm/spying/index.html
+      - title: Creating a Custom Spoofing Script
+        url: lessons/hackingscratch/postc/mitm/custom/index.html
+      - title: Understanding HTTPS and How to Bypass it
+        url: lessons/hackingscratch/postc/mitm/understanding-https/index.html
+      - title: Bypassing HTTPS
+        url: lessons/hackingscratch/postc/mitm/bypassing-https/index.html
+      - title: Bypassing HSTS
+        url: lessons/hackingscratch/postc/mitm/bypassing-hsts/index.html
+      - title: DNS Spoofing
+        url: lessons/hackingscratch/postc/mitm/dns-spoofing/index.html
+
+  - title: Computer Hacking - Introduction
+    contents:
+      - title: Introduction
+        url: lessons/hackingscratch/computerh/intro/index.html
+
+  - title: Computer Hacking - Server Side Attacks
+    contents:
+      - title: Installing Metasploitable
+        url: lessons/hackingscratch/computerh/serverside/metasploitable/index.html
+      - title: Introduction to Server-Side Attacks
+        url: lessons/hackingscratch/computerh/serverside/introduction/index.html
+      - title: Basic Information Gathering
+        url: lessons/hackingscratch/computerh/serverside/info-gathering/index.html
+      - title: Hacking a Remote Server Using a Basic Metasploit Exploit
+        url: lessons/hackingscratch/computerh/serverside/basic-hack/index.html
+time: 15
+difficulty: Beginner

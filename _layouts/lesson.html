@@ -1,0 +1,25 @@
+{% assign course = site.data.courses[page.course] %}
+
+{% if site.useAppKit == true %}
+{% include head-appkit.html %}
+
+<div class="card card-style">
+  <div class="content mb-0">
+
+    <p class="mb-n1 color-highlight font-600">
+      {{ page.section }}
+    </p>
+
+    <h3 class="mb-3">
+      {{ page.title }}
+    </h3>
+
+    <p>
+      {{ page.content | markdownify }}
+    </p>
+
+  </div>
+</div>
+
+{% include footer-appkit.html %}
+{% endif %}

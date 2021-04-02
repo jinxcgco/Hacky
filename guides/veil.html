@@ -1,0 +1,34 @@
+---
+title: Installing Veil
+layout: guide
+---
+
+Veil is an undetectable backdoor creator framework, to install it (if you are
+running Kali Linux just issue `sudo apt install veil`) if not, execute:
+
+```bash
+sudo apt-get -y install git
+git clone https://github.com/Veil-Framework/Veil.git
+cd Veil/
+./config/setup.sh --force --silent
+```
+
+After that, you execute:
+
+```bash
+./Veil.py
+```
+
+Or if you are using Kali:
+
+```bash
+veil
+```
+
+To run Veil. If you get any error when executing Veil, just run:
+
+```bash
+./config/setup.sh --force --silent
+```
+
+Again.

@@ -1,0 +1,84 @@
+{% if site.useAppKit == true %}
+{% include head-appkit.html %}
+
+<style>
+  p {
+      margin-bottom: 0;
+  }
+</style>
+
+<div class="content mt-0">
+
+  <div class="search-box search-dark shadow-xl border-0 bg-theme rounded-sm bottom-0">
+    <i class="fa fa-search"></i>
+    <input type="text" class="border-0" placeholder="Search for commands here" onkeyup="search(this.value)"/>
+  </div>
+
+</div>
+
+<div id="injectResults">
+</div>
+
+<script>
+
+  var inject, commandsJSON
+
+  window.onload = () => {
+      inject = document.getElementById("injectResults")
+      commandsJSON = {% include commandsJSON.html %}
+  }
+
+  function search(term) {
+      const searchString = term.toLowerCase()
+      const commandsHacking = commandsJSON.commands
+
+      const filteredCommands = commandsHacking.filter((command) => {
+	  return(
+	      command.name.toLowerCase().includes(searchString) ||
+		  command.cont.toLowerCase().includes(searchString)
+	  )
+      })
+
+      displayCommands(filteredCommands)
+  }
+
+  function displayCommands(filteredCommands) {
+      const htmlString = filteredCommands.map((command) => {
+	  let commandHTML = ''
+
+	  for (let i = 0; i < command.commands.length; i++) {
+	      commandHTML += `
+<code>${command.commands[i]}</code>
+<br>
+`
+	  }
+
+	  commandHTML += "<p>For example:</p>"
+
+	  for (let i = 0; i < command.examples.length; i++) {
+	      commandHTML += `
+<code>${command.examples[i]}</code>
+<br/>
+`
+	  }
+
+	  return `
+<div class="card card-style ms-0 me-0 rounded-0">
+<div class="content">
+<p class="color-highlight font-600 mb-n1">${command.cate}</p>
+<h3 class="font-24 font-700 mb-2">
+${command.name}
+</h3>
+${command.cont}
+${commandHTML}
+</div>
+</div>
+`
+      }).join('')
+
+      inject.innerHTML = htmlString
+  }
+</script>
+
+{% include footer-appkit.html %}
+{% endif %}
