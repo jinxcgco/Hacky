@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+
+    <base href="{{ site.siteRoot }}" target="_blank"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <meta name="viewport"
+	  content="width=device-width, initial-scale=1, minimum-scale=1,
+		   maximum-scale=1, user-scalable=no"/>
+
+    <title>{{ site.title }} | {{ page.title }}</title>
+
+    <link href="assets/css/styles.css" rel="stylesheet"/>
+
+    <link href="assets/css/colors.css" rel="stylesheet"/>
+  </head>
+  <body class="red-skin">
+
+    <div id="preloader">
+      <div class="preloader">
+	<span></span>
+	<span></span>
+      </div>
+    </div>
+
+    <div id="main-wrapper">
+
+      {% include header-learnup.html %}

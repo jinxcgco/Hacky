@@ -3,10 +3,12 @@ description: >-
   A completely free education application.
 permalink: /:title/
 
+author: Jinx
+
 # Hackable variables
 
 ## AppKit variables
-useAppKit: yes
+useAppKit: no
 
 siteRoot: /
 circularHome: no
@@ -23,3 +25,6 @@ coursePageAboutShowDuration: yes
 coursePageAboutShowDifficulty: yes
 
 coursePageCurriculumTitle: "Curriculum"
+
+## LearnUP variables
+useLearnUp: yes
