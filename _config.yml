@@ -8,7 +8,7 @@ author: Jinx
 # Hackable variables
 
 ## AppKit variables
-useAppKit: no
+useAppKit: yes
 
 siteRoot: /
 circularHome: no
@@ -27,4 +27,4 @@ coursePageAboutShowDifficulty: yes
 coursePageCurriculumTitle: "Curriculum"
 
 ## LearnUP variables
-useLearnUp: yes
+useLearnUp: no

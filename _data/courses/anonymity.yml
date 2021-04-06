@@ -30,5 +30,12 @@ youlearn:
   - Secure your computer and your data
 category: Anonymity
 contents:
+  - title: Introduction
+    contents:
+
+      - title: Introduction
+        url: lessons/anonymity/intro/intro/index.html
+      - title: Course Breakdown
+        url: lessons/anonymity/intro/breakdown/index.html
 time: 10
 difficulty: Beginner
